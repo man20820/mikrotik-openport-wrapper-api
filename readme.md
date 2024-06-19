@@ -1,3 +1,60 @@
+# DotENV 
+
+```bash
+MT_ADDRESS=MikroTik Host / IP
+MT_PORT=MikroTik REST API Port
+MT_USER=MikroTik User
+MT_PASSWORD=MikroTik Password
+APP_USER=User for basic auth
+APP_PASSWORD=User for basic auth
+```
+
+# Usage
+Request
+```bash
+curl -k http://test:ting@localhost:3000/
+```
+Response
+```bash
+{
+    "architecture-name": "x86_64",
+    "board-name": "CHR",
+    "build-time": "May/30/2023 13:49:00",
+    "cpu": "Intel",
+    "cpu-count": "1",
+    "cpu-frequency": "2399",
+    "cpu-load": "10",
+    "factory-software": "7.1",
+    "free-hdd-space": "26626113536",
+    "free-memory": "591990784",
+    "platform": "MikroTik",
+    "total-hdd-space": "26647932928",
+    "total-memory": "1006632960",
+    "uptime": "41w6d18h4m22s",
+    "version": "7.9.2 (stable)",
+    "write-sect-since-reboot": "138115328",
+    "write-sect-total": "138115328"
+}
+```
+Request
+```bash
+curl -k http://test:ting@localhost:3000/open-port
+```
+Response
+```bash
+{
+    ".id": "*C69D",
+    "address": "127.0.0.1",
+    "comment": "GithubActions",
+    "creation-time": "jun/19/2024 18:13:17",
+    "disabled": "false",
+    "dynamic": "true",
+    "list": "GithubActions",
+    "timeout": "30m"
+}
+```
+
+
 # Express.js Hello World API
 The Express.js Hello World API is a simple REST API that responds to a GET request on the root endpoint with the text "Hello World!".
 
